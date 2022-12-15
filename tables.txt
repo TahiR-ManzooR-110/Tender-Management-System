@@ -1,0 +1,50 @@
+Admin table:-
+-----------------
+
+create table Admin (
+	username varchar(225) unique not null,
+	password varchar(225) not null
+);
+
+==============================================================
+
+Vender table:-
+------------------
+
+create table Vender (
+	vid int primary key auto_increment, 
+	vname varchar(25) not null,
+	vemail varchar(40) not null unique, 
+	vpassword varchar(20) not null, 
+	company varchar(225) not null, 
+	address varchar(225) not null
+);
+
+==============================================================
+
+Tender table:-
+-------------------
+
+create table Tender (
+	tid int primary key auto_increment, 
+	tname varchar(25) not null,
+	ttype varchar(20),
+	tdescription varchar(225),
+	tdeadline varchar(35),
+	tlocation varchar(125)
+);
+
+==============================================================
+
+Bid table:-
+-------------
+
+create table Bid ( 
+	bid int primary key auto_increment, 
+	vid int, 
+	tid int, 
+	bidamount double,
+	status varchar(10),
+	foreign key (vid) references vender(vid),
+	foreign key (tid) references tender(tid)
+);
