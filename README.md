@@ -21,8 +21,14 @@
 3. View status of a Bid(Whether Selected or Not)
 4. View his own Bid History.
 
-*** ER Diagram***
-<img src="./ERdiagram.png"></img>
+# ER Diagram
 
-*** Flow Diagram***
-<img src="./flowdiagram.png"></img>
+<br>
+
+<img style="width:20%" src="./ERdiagram.png"></img>
+
+# Flow Diagram
+
+<br>
+
+<img style="width:20%" src="./flowdiagram.png"></img>
