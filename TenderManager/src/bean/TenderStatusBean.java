@@ -1,17 +1,17 @@
 package bean;
 
-public class TenderStatus {
+public class TenderStatusBean {
 	
 	private int bid;
 	private int vid;
 	private int tid;
 	private String status;
 	
-	public TenderStatus() {
+	public TenderStatusBean() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public TenderStatus(int bid, int vid, int tid, String status) {
+	public TenderStatusBean(int bid, int vid, int tid, String status) {
 		super();
 		this.bid = bid;
 		this.vid = vid;
