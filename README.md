@@ -25,10 +25,10 @@
 
 <br>
 
-<img style="width:60%" src="./ERdiagram.png"></img>
+<img style="width:80%" src="./ERdiagram.png"></img>
 
 # Flow Diagram
 
 <br>
 
-<img style="width:60%" src="./flowdiagram.png"></img>
+<img style="width:80%" src="./flowdiagram.png"></img>
