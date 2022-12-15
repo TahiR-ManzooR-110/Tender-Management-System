@@ -1,12 +1,12 @@
 package exception;
 
-public class VenderException extends Exception{
+public class VendorException extends Exception{
 	
-	public VenderException() {
+	public VendorException() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public VenderException(String message) {
+	public VendorException(String message) {
 		super(message);
 		// TODO Auto-generated constructor stub
 	}
