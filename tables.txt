@@ -36,10 +36,10 @@ create table Tender (
 
 ==============================================================
 
-Bid table:-
+Bidder table:-
 -------------
 
-create table Bid ( 
+create table Bidder ( 
 	bid int primary key auto_increment, 
 	vid int, 
 	tid int, 
@@ -47,4 +47,17 @@ create table Bid (
 	status varchar(10),
 	foreign key (vid) references vender(vid),
 	foreign key (tid) references tender(tid)
+);
+
+==============================================================
+
+TenderStatus:-
+--------------
+
+create table TenderStatus (
+	bid int,
+	vid int,
+	tid int,
+	status varchar(10),
+	foreign key (bid) references Bidder(bid)
 );
