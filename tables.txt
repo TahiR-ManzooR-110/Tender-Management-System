@@ -26,11 +26,11 @@ Tender table:-
 -------------------
 
 create table Tender (
-	tid int primary key auto_increment, 
+	tid int primary key not null auto_increment, 
 	tname varchar(25) not null,
 	ttype varchar(20),
 	tdescription varchar(225),
-	tdeadline varchar(35),
+	tdeadline varchar(35) not null,
 	tlocation varchar(125)
 );
 
@@ -40,7 +40,7 @@ Bidder table:-
 -------------
 
 create table Bidder ( 
-	bid int primary key auto_increment, 
+	bid int primary key not null auto_increment, 
 	vid int, 
 	tid int, 
 	bidamount double,
