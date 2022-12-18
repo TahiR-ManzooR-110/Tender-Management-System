@@ -6,7 +6,7 @@ import exception.VendorException;
 
 public interface VendorDao {
 
-	public String registernewVendor(VendorBean vendor) throws VendorException;
+	public String registerNewVendor(VendorBean vendor) throws VendorException;
 	
 	public List<VendorBean> viewAllVendors()throws VendorException;
 	
