@@ -31,8 +31,8 @@ public class VendorDaoImpl implements VendorDao{
 					ps2.setString(2, vendor.getVname());
 					ps2.setString(3, vendor.getVemail());
 					ps2.setString(4, vendor.getVpassword());
-					ps2.setString(5, vendor.getVcompany());
-					ps2.setString(6, vendor.getVaddress());
+					ps2.setString(5, vendor.getcompany());
+					ps2.setString(6, vendor.getaddress());
 					
 					int x = ps2.executeUpdate();
 					
@@ -64,7 +64,7 @@ public class VendorDaoImpl implements VendorDao{
 			ResultSet rs =ps.executeQuery();
 			
 			while(rs.next()) {
-				VendorBean v = new VendorBean(rs.getInt("vid"), rs.getString("vname"), rs.getString("vemail"), rs.getString("vpassword"),  rs.getString("vcompany"), rs.getString("vaddress"));
+				VendorBean v = new VendorBean(rs.getInt("vid"), rs.getString("vname"), rs.getString("vemail"), rs.getString("vpassword"),  rs.getString("company"), rs.getString("address"));
 				vendor.add(v);
 			}
 			

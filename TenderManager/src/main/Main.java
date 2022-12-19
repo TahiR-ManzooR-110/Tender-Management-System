@@ -48,8 +48,8 @@ public class Main {
 						System.out.println("4. View All the Tenders.");
 						System.out.println("5. View All the Bids of a tender.");
 						System.out.println("6. Assign tender to a vendor.");
-						System.out.println("7. To remove tender from list");
-						System.out.println("8. To update tender");
+						System.out.println("7. Remove tender from list");
+						System.out.println("8. Update tender");
 						System.out.println("9. Return back to admin menu");
 						System.out.println("10.Return back to main menu");
 
@@ -73,12 +73,12 @@ public class Main {
 								String vpassword = sc.next();
 
 								System.out.println("Enter Vendor Company name: ");
-								String vcompany = sc.next();
+								String company = sc.next();
 
 								System.out.println("Enter Vendor address: ");
-								String vaddress = sc.next();
+								String address = sc.next();
 
-								VendorBean vb = new VendorBean(vid, vname, vemail, vpassword, vcompany, vaddress);
+								VendorBean vb = new VendorBean(vid, vname, vemail, vpassword, company, address);
 
 								VendorDao dao = new VendorDaoImpl();
 
@@ -96,7 +96,15 @@ public class Main {
 								List<VendorBean> list = dao.viewAllVendors();
 
 								for (VendorBean v : list) {
-									System.out.println(v);
+									System.out.println("==============================================");
+									System.out.println("Vendor id: "+v.getVid());
+									System.out.println("Vendor name: "+v.getVname());
+									System.out.println("Vendor email: "+v.getVemail());
+									System.out.println("Vendor password: "+v.getVpassword());
+									System.out.println("Company: "+v.getcompany());
+									System.out.println("Address: "+v.getaddress());
+									
+									System.out.println("================================================");
 								}
 								break;
 							}
@@ -136,7 +144,14 @@ public class Main {
 								List<TenderBean> list = dao.getAllTenders();
 
 								for (TenderBean t : list) {
-									System.out.println(t);
+									System.out.println("==============================================");
+									System.out.println("Tender id: "+t.getTid());
+									System.out.println("Tender name: "+t.getTname());
+									System.out.println("Tender type: "+t.getTtype());
+									System.out.println("Tender description: "+t.getTdescription());
+									System.out.println("Tender deadline: "+t.getTdeadline());
+									System.out.println("Tender location: "+t.getTlocation());
+									System.out.println("==============================================");
 								}
 								break;
 							}
@@ -229,7 +244,6 @@ public class Main {
 							}
 
 							case 9: {
-
 								admin();
 								break;
 
@@ -306,7 +320,14 @@ public class Main {
 								List<TenderBean> list = dao.getAllTenders();
 
 								for (TenderBean t : list) {
-									System.out.println(t);
+									System.out.println("==============================================");
+									System.out.println("Tender id: "+t.getTid());
+									System.out.println("Tender name: "+t.getTname());
+									System.out.println("Tender type: "+t.getTtype());
+									System.out.println("Tender description: "+t.getTdescription());
+									System.out.println("Tender deadline: "+t.getTdeadline());
+									System.out.println("Tender location: "+t.getTlocation());
+									System.out.println("==============================================");
 								}
 								break;
 
@@ -340,7 +361,7 @@ public class Main {
 
 							case 3: {
 
-								System.out.println("WELCOME TO VIEW STATUS OF A BID(WHETHER SELECTED OR NOT).");
+								System.out.println("VIEW STATUS OF A BID(WHETHER SELECTED OR NOT).");
 
 								System.out.println("ENTER BIDDER ID: ");
 								int bid = sc.nextInt();
@@ -351,15 +372,15 @@ public class Main {
 								System.out.println("ENTER YOUR VENDOR ID: ");
 								int vid = sc.nextInt();
 
-								System.out.println("BID ACCEPTANCE DETAILS");
-								System.out.println();
+								System.out.println("BID ACCEPTANCE STATUS");
 								BidderDao dao = new BidderDaoImpl();
 								String message = dao.acceptBid(bid, tid, vid);
 								System.out.println(message);
-								System.out.println("BID REJECTION DETAILS");
 								System.out.println();
+								System.out.println("BID REJECTION STATUS");
 								String status = dao.rejectBid(bid);
 								System.out.println(status);
+								System.out.println();
 								break;
 
 							}

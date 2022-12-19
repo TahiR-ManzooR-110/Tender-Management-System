@@ -88,7 +88,7 @@ public class TenderDaoImpl implements TenderDao{
 				tender.setTname(rs.getString("tname"));
 				tender.setTtype(rs.getString("ttype"));
 				tender.setTdescription(rs.getString("tdescription"));
-				tender.setTdeadline("tdeadline");
+				tender.setTdeadline(rs.getString("tdeadline"));
 				tender.setTlocation(rs.getString("tlocation"));
 	
 				tenders.add(tender);
@@ -114,7 +114,7 @@ public class TenderDaoImpl implements TenderDao{
 				
 				status = "Tender is already assigned to vendor "+rs.getInt("vid");
 			}else{
-				PreparedStatement ps = con.prepareStatement("insert into tender_status values(?,?,?,?)");
+				PreparedStatement ps = con.prepareStatement("insert into tenderstatus values(?,?,?,?)");
 				
 				ps.setInt(1, bid);
 				ps.setInt(2, vid);
