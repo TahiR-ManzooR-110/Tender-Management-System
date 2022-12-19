@@ -50,8 +50,8 @@ public class Main {
 						System.out.println("6. Assign tender to a vendor.");
 						System.out.println("7. Remove tender from list");
 						System.out.println("8. Update tender");
-						System.out.println("9. Return back to admin menu");
-						System.out.println("10.Return back to main menu");
+						System.out.println("9. Exit to admin menu");
+						System.out.println("10.Exit to main menu");
 
 						int k = sc.nextInt();
 
@@ -306,8 +306,8 @@ public class Main {
 						System.out.println("2. Place a Bid against a Tender.");
 						System.out.println("3. View status of a Bid(Whether Selected or Not).");
 						System.out.println("4. View your own Bid History");
-						System.out.println("5. Return to back vendor menu");
-						System.out.println("6. Return to back main menu");
+						System.out.println("5. Exit to vendor menu");
+						System.out.println("6. Exit to main menu");
 
 						int k = sc.nextInt();
 
@@ -396,8 +396,14 @@ public class Main {
 
 								List<BidderBean> list = dao.getAllBidsOfVendor(vid);
 
-								for (BidderBean t : list) {
-									System.out.println(t);
+								for (BidderBean b : list) {
+									System.out.println("=====================================");
+									System.out.println("Bidder id: "+b.getBid());
+									System.out.println("Vendor id: "+b.getVid());
+									System.out.println("Tender id: "+b.getTid());
+									System.out.println("Bid Amount: "+b.getBidAmount());
+									System.out.println("Status: "+b.getStatus());
+									System.out.println("=====================================");
 								}
 								break;
 							}
