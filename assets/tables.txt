@@ -12,7 +12,7 @@ Vendor table:-
 ------------------
 
 create table Vendor (
-	vid int primary key not null auto_increment, 
+	vid int primary key not null, 
 	vname varchar(25) not null,
 	vemail varchar(40) not null unique, 
 	vpassword varchar(20) not null, 
@@ -26,7 +26,7 @@ Tender table:-
 -------------------
 
 create table Tender (
-	tid int primary key not null auto_increment, 
+	tid int primary key not null, 
 	tname varchar(25) not null,
 	ttype varchar(20) not null,
 	tdescription varchar(225) not null,
@@ -40,7 +40,7 @@ Bidder table:-
 -------------
 
 create table Bidder ( 
-	bid int primary key not null auto_increment, 
+	bid int primary key not null, 
 	vid int, 
 	tid int, 
 	bidamount double not null,
@@ -55,7 +55,7 @@ TenderStatus:-
 --------------
 
 create table TenderStatus (
-	bid int not null auto_increment,
+	bid int not null,
 	vid int,
 	tid int,
 	status varchar(10),
