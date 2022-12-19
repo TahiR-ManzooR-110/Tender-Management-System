@@ -32,3 +32,8 @@
 <br>
 
 <img style="width:80%" src="./assets/flowdiagram.png"></img>
+
+**Teck Stack :** Core Java, JDBC, SQL.
+<br>
+
+**Softwares and Tools :**  MYSQL, STS, GitBash
