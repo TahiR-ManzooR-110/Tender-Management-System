@@ -163,10 +163,10 @@ public class Main {
 
 								BidderDao dao = new BidderDaoImpl();
 
-								List<BidderBean> list = dao.getAllBidsOnTendor(tid);
+								List<BidderBean> list = dao.getAllBidsOnTender(tid);
 
 								if (list.size() == 0) {
-									System.out.println("Tendor is not currently up for bid.");
+									System.out.println("Tender is not currently up for bid.");
 								} else {
 
 									for (BidderBean t : list) {
@@ -183,7 +183,7 @@ public class Main {
 								System.out.println("ENTER VENDOR ID");
 								int vid = sc.nextInt();
 
-								System.out.println("ENTER TENDOR ID");
+								System.out.println("ENTER TENDER ID");
 								int tid = sc.nextInt();
 
 								System.out.println("ENTER BIDDER ID");

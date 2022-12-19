@@ -14,7 +14,7 @@ public interface BidderDao {
 	
 	public String bidTendor(int bid,int vid , int tid , double bidamount)throws BidderException;
 	
-	public List<BidderBean> getAllBidsOnTendor(int tid)throws BidderException;
+	public List<BidderBean> getAllBidsOnTender(int tid)throws BidderException;
 	
 	public List<BidderBean> getAllBidsOfVendor(int vid)throws BidderException;
 	
